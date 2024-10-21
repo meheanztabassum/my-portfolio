@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <span class="name">Meghla Akter</span>
+            <span class="contact email">
+                <i class="fa-solid fa-envelope"></i> mehenaztabassum04@gmail.com
+            </span>
+            <span class="contact phone">
+                <i class="fa-solid fa-phone"></i> 01740010697
+            </span>
+        </div>
+        <div class="navbar-right">
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#recommendations">Recommendations</a>
+        </div>
+    </nav>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top">&#8679;</div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <img src="myimg.jpg" alt="Meghla Akter" class="about-image">
+            <div class="about-text">
+                <h2 class="about-heading">Hi, I'm Meghla Akter! 👋</h2>
+                <p class="about-details">
+                    Hi, I’m Meghla Akter, a dedicated student of Computer Science and Engineering at Dinajpur Polytechnic Institute. I have a strong passion for programming and web development, with experience in various projects that focus on creating efficient and user-friendly applications. Outside of my studies, I enjoy exploring new technologies and enhancing my skills through hands-on practice. I’m excited to connect and explore opportunities in the tech field.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2 class="skills-heading">Skills</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <i class="fa-brands fa-html5"></i>
+                <p>HTML</p>
+            </div>
+            <div class="skill-item">
+                <i class="fa-brands fa-css3-alt"></i>
+                <p>CSS</p>
+            </div>
+            <div class="skill-item">
+                <i class="fa-brands fa-js"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill-item">
+                <i class="fa-solid fa-database"></i>
+                <p>SQL</p>
+            </div>
+            <div class="skill-item">
+                <i class="fa-brands fa-php"></i>
+                <p>PHP</p>
+            </div>
+            <div class="skill-item">
+                <i class="fa-brands fa-python"></i>
+                <p>Python</p>
+            </div>
+            <div class="skill-item">
+                <i class="fa-brands fa-java"></i>
+                <p>Java</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-item">
+                <h3 class="project-name">Coffee Shop Website</h3>
+                <ul>
+                    <li><p class="project-description">This project presents a dynamic and responsive website for a coffee shop, developed using HTML, CSS, JavaScript, and a touch of PHP.</p></li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3 class="project-name">Flower Shop Website</h3>
+                <ul>
+                    <li><p class="project-description">This project is a fully responsive website designed for a flower shop, crafted using HTML, CSS, and JavaScript.</p></li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3 class="project-name">Tic Tac Toe Game</h3>
+                <ul>
+                    <li><p class="project-description">This project features a classic Tic Tac Toe game developed using HTML, CSS, and JavaScript.</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="recommendations-section">
+        <h2 class="recommendations-heading">Recommendations</h2>
+        <div class="recommendations-container">
+            <div class="recommendation-item">
+                <div class="recommendation-text">"Great work! Highly recommend!"</div>
+            </div>
+            <div class="recommendation-item">
+                <div class="recommendation-text">"An exceptional project! Impressive results!"</div>
+            </div>
+            <div class="recommendation-item">
+                <div class="recommendation-text">"Innovative ideas and execution! Fantastic!"</div>
+            </div>
+        </div>
+        <!-- Leave a Recommendation Form -->
+        <section>
+            <h3 class="leave-rec-heading">Leave a Recommendation</h3>
+            <form id="recommendationForm" onsubmit="addRecommendation(event)">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name (optional)">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+    </section>
+
+    <!-- Popup Message -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>Your recommendation has been submitted successfully!</p>
+            <button id="ok-button" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
